@@ -31,3 +31,6 @@ print (type(stuksprijs)) #zo weet je wat voor type je variable is
 " ' '+ str(crossaintjes) +' ' " #zo maak je een een int/float naar een string in een zin.
 a = input('|  Naam      :')
 print(a) #input string
+print (f"small x {aantal}  €{aantal}") #zo print je alles samen met een variable
+
+

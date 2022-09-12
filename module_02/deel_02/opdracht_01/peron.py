@@ -1,10 +1,10 @@
-import string
-from unicodedata import name
-
-
+naam = input('Wat is uw naam?:')
+adres = input('Wat is uw adres?:')
+postcode = input('Wat is uw postcode?:')
+woonplaats = input('Wat is uw woonplaats?:')
 print ('----------------------------------------------------')
-a = input('|  Naam      :')
-b = input('|  Adres     :')
-c = input('|  Postcode  :')
-d = input('|  Woonplaats:')
+print (f"|  {naam}")
+print (f"|  {adres}")
+print (f"|  {postcode}")
+print (f"|  {woonplaats}")
 print ('----------------------------------------------------')

@@ -2,9 +2,9 @@
 # Opdracht: PizzaCalculator
 
 
-a = 5 #enkel prijs small
-b = 7 #enkel prijs medium
-c = 12 #enkel prijs large
+smallAmount = 5 #enkel prijs small
+mediumAmount = 7 #enkel prijs medium
+largeAmount = 12 #enkel prijs large
 
 btw = 9 #btw prijs
 
@@ -14,18 +14,18 @@ medium = int(input("Hoeveel medium pizza's wilt u?:"))
 large = int(input("Hoeveel large pizza's wilt u?:"))
 
 
-smallprice = int(small * a) #berekening aantal pizza's x enkel prijs
-mediumprice = int(medium * b)
-largeprice = int(large * c)
+smallPrice = int(small * smallAmount) #berekening aantal pizza's x enkel prijs
+mediumPrice = int(medium * mediumAmount)
+largePrice = int(large * largeAmount)
 
 
-prijs = smallprice + mediumprice + largeprice #berekening subtotaal prijs
+prijs = smallPrice + mediumPrice + largePrice #berekening subtotaal prijs
 print ("-----------------------------------------")
 print ("|        Bardia's Amazing Pizza's       |")
 print ("-----------------------------------------")
-print (f"{small}  Small pizza  €{a}  €{smallprice} ")
-print (f"{medium}  Medium pizza €{b}  €{mediumprice}") 
-print (f"{large}  Large pizza  €{c} €{largeprice} ")
+print (f"{small}  Small pizza  €{smallAmount}  €{smallPrice} ")
+print (f"{medium}  Medium pizza €{mediumAmount}  €{mediumPrice}") 
+print (f"{large}  Large pizza  €{largeAmount} €{largePrice} ")
 print ("-----------------------------------------")
 print (f"Subtotaal:  €{prijs}")
 print (f"BTW:        €{prijs / 100 * btw}\n") #berekening BTW
