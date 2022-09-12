@@ -32,5 +32,9 @@ print (type(stuksprijs)) #zo weet je wat voor type je variable is
 a = input('|  Naam      :')
 print(a) #input string
 print (f"small x {aantal}  €{aantal}") #zo print je alles samen met een variable
+a = 5
+b = 3
+if a > b:
+    print ('a is groter dan b') #hier laat je zien dat a groter is dan b waardoor de command door gaat
 
 
