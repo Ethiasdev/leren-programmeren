@@ -37,4 +37,16 @@ b = 3
 if a > b:
     print ('a is groter dan b') #hier laat je zien dat a groter is dan b waardoor de command door gaat
 
+kaas = int(input("Is de kaas geel?"))
+if kaas == "ja":
+    print ("ja")
 
+def opposite (number):
+    antwoord = number * -1
+    return antwoord
+
+
+if print (opposite(7.2) == -7.2):
+    print ("Goed Gedaan")
+
+#met if moet alles op dezelfde lijn als je lange code typt
