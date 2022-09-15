@@ -13,40 +13,30 @@ stuksprijs = 0.89 #dit is een float, float is een getal met een komma
 #########################################################################
 # built in functies
 #########################################################################
-print ('Bardia')
-print (aantal)
-print (omschrijving)
-print (stuksprijs)
-
-print (aantal * stuksprijs)
-print (aantal * omschrijving)
-print (str(aantal) + ' ' + omschrijving) # + ' ' + = (spatie)
-print (str(aantal) + ' ' + omschrijving + ' ' + str(stuksprijs)) #met 'str' maak je van een float of een int een string
-print (f"{aantal} {omschrijving} {stuksprijs}") #zo print je een format dit is een makkelijker manier
-
-inputLengte = input('geef de stukrpijs:')
-lengte = float (inputLengte)  #zo vraag je om een input (float, int en str)
-
-print (type(stuksprijs)) #zo weet je wat voor type je variable is
-" ' '+ str(crossaintjes) +' ' " #zo maak je een een int/float naar een string in een zin.
-a = input('|  Naam      :')
-print(a) #input string
-print (f"small x {aantal}  €{aantal}") #zo print je alles samen met een variable
-a = 5
-b = 3
-if a > b:
-    print ('a is groter dan b') #hier laat je zien dat a groter is dan b waardoor de command door gaat
-
-kaas = int(input("Is de kaas geel?"))
-if kaas == "ja":
-    print ("ja")
-
-def opposite (number):
-    antwoord = number * -1
-    return antwoord
+input('Wat is uw naam?:')
+int(input('Wat is uw naam?:'))
+naam = input('Wat is uw naam?:')
+small = int(input("Hoeveel small pizza's wilt u?:"))
+small = float(input("Hoeveel small pizza's wilt u?:")) #Verschillende soorten inputs!
 
 
-if print (opposite(7.2) == -7.2):
-    print ("Goed Gedaan")
+print (f"De dag is voorbij over {small} uur en {naam} minuten") # format printing!
 
-#met if moet alles op dezelfde lijn als je lange code typt
+
+if small > naam:
+    print(f"a is het grootste getal: {small}")
+elif small < naam:
+    print (f"a is het kleinste getal: {naam}")
+else:
+    print (f"a en b zijn even groot") #zo gebruik je if's en elif's en else's!
+
+
+if praktijk > 4 and diploma == "ja" and rijbewijs == "ja" and hoed == "ja" and snor > 10 or krullen > 20 and lengte > 150 and gewicht > 90 and certificaat == "ja" and veter == "ja" and voorhoofd == "ja" and kaas == "ja":
+    print ("Proficiat! U komt in aanmerking voor een sollicitatiegesprek, stuur snel uw CV!")
+elif praktijk < 4 or diploma == "nee" or rijbewijs == "nee" or hoed == "nee" or snor < 10 or krullen < 20 or lengte < 150 or gewicht < 90 or certificaat == "nee" or veter == "nee" or voorhoofd == "nee" or kaas == "nee":
+    print ("U voldoet niet aan onze strenge eisen voor de functie van Circusdirecteur, het spijt ons!") #zo kan je iemand een vragen lijst laten invullen en hiermee elke antwoord checken met and of or!
+
+
+try:
+ small = int(input("Hoeveel small pizza's wilt u?:"))
+except: exit(print("Vul gehele getallen in!")) #hiermee kan je met except een melding laten zien wanneer er iets fout word ingevuld of met een error! je kan ook tussen de except een specefieke foutmelding zetten!
