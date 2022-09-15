@@ -1,33 +1,33 @@
 kaas = input("Is de kaas geel?")
-if kaas == "ja":
+if kaas.lower() == "ja":
     gaten = input("Zitten er gaten in?")
-    if gaten == "ja":
+    if gaten.lower() == "ja":
         duur = input("is de kaas belachelijk duur?")
-        if duur == "ja":
+        if duur.lower() == "ja":
             print ("Emmenthaler")
-        elif duur == "nee":
+        elif duur.lower() == "nee":
             print ("Leerdammer")
-    elif gaten == "nee":
+    elif gaten.lower() == "nee":
         hard = input("is de kaas hard als steen?")
-        if hard == "ja":
+        if hard.lower() == "ja":
             print ("Parmigiano Reggiano")
-        elif hard == "nee":
+        elif hard.lower() == "nee":
             print ("Goudse kaas")
-elif kaas == "nee":
+elif kaas.lower() == "nee":
     schimmel = input("Heeft de kaas blauwe schmimmel?")
-    if schimmel == "ja":
+    if schimmel.lower() == "ja":
         korst = input("Heeft de kaas een korst?")
-        if korst == "ja":
+        if korst.lower() == "ja":
             print ("Blue de Rochbaron")
-        elif korst == "nee":
+        elif korst.lower() == "nee":
             print ("Foume d'Ambert")
-    elif schimmel == "nee":
+    elif schimmel.lower() == "nee":
         korst1 = input("Heeft de kaas een korst?")
-        if korst1 == "ja":
+        if korst1.lower() ( "ja"):
             print ("Camembert")
-        elif korst1 == "nee":
+        elif korst1.lower() == "nee":
             print ("Mozzarella")
-                
+                        
     
 
 
