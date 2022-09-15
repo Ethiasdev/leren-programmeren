@@ -33,7 +33,7 @@ veter = input ("Heeft u een Veterstrikdiploma? ja/nee:")
 voorhoofd = input ("Heeft u een lange voorhoofd? ja/nee:")
 kaas = input ("Heeft u ooit kaas gegeten? ja/nee:")
 
-if praktijk.lower() > 4 and diploma.lower() == "ja" and rijbewijs.lower() == "ja" and hoed.lower() == "ja" or snorLengte > 10 or krullenLengte > 20 and lengte > 150 and gewicht > 90 and certificaat.lower() == "ja" and veter.lower() == "ja" and voorhoofd.lower() == "ja" and kaas.lower() == "ja" and krullen.lower() == "ja" or snor.lower() == "ja":
+if praktijk > 4 and diploma.lower() == "ja" and rijbewijs.lower() == "ja" and hoed.lower() == "ja" and (manVrouw == "vrouw" and krullen.lower() == "ja" and  krullenLengte > 20) or (manVrouw == "man" and snor.lower() == "ja" and snorLengte > 10) and lengte > 150 and gewicht > 90 and certificaat.lower() == "ja" and veter.lower() == "ja" and voorhoofd.lower() == "ja" and kaas.lower() == "ja":
     print ("Proficiat! U komt in aanmerking voor een sollicitatiegesprek, stuur snel uw CV!")
 else:
      print ("U voldoet niet aan onze strenge eisen voor de functie van Circusdirecteur, het spijt ons!")

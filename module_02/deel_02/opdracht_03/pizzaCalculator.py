@@ -7,16 +7,22 @@ mediumAmount = 7 #enkel prijs medium
 largeAmount = 12 #enkel prijs large
 
 btw = 9 #btw prijs
-
-try:
- small = int(input("Hoeveel small pizza's wilt u?:"))
-except: exit(print("Vul gehele getallen in!"))
-try:
- medium = int(input("Hoeveel medium pizza's wilt u?:"))
-except: exit(print("Vul gehele getallen in!"))
-try:
- large = int(input("Hoeveel large pizza's wilt u?:"))
-except: exit(print("Vul gehele getallen in!"))
+var = 0
+while var == 1:
+    try:
+        small = int(input("Hoeveel small pizza's wilt u?:"))
+        var += 1
+    except: (print("Vul gehele getallen in!"))
+while var == 2 :    
+    try:
+        medium = int(input("Hoeveel medium pizza's wilt u?:"))
+        var += 1
+    except: (print("Vul gehele getallen in!"))
+while var == 3:
+    try:
+        large = int(input("Hoeveel large pizza's wilt u?:"))
+        var += 1
+    except: (print("Vul gehele getallen in!"))
 
 smallPrice = int(small * smallAmount) #berekening aantal pizza's x enkel prijs
 mediumPrice = int(medium * mediumAmount)
