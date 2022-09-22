@@ -1,11 +1,11 @@
 from RobotArm import RobotArm
 robotArm = RobotArm('exercise 10')
-for x in range(5):
+for f in range(5):
     
-    for i in range(x): robotArm.moveRight()
+    for i in range(f): robotArm.moveRight()
     robotArm.grab()
-    for k in range(9 -x -x): robotArm.moveRight()
+    for k in range(9 -f -f): robotArm.moveRight()
     robotArm.drop()
-    for k in range(9 + x): robotArm.moveLeft()
+    for z in range(9 + f): robotArm.moveLeft()
     
 robotArm.wait()
