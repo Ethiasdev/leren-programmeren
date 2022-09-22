@@ -1,18 +1,27 @@
 telefoon1 = "Iphone 13"
 telefoon2 = "Samsung Galaxy S22"
+telefoon3 = "Asus Zenfone 9"
 
 iphonePrijs = int(input(f"Hoeveel kost de {telefoon1}?:"))
 samsungPrijs = int(input(f"Hoeveel kost de {telefoon2}?:"))
+asusPrijs = int(input(f"Hoeveel kost de {telefoon3}?:"))
 
-if iphonePrijs > samsungPrijs:
+if iphonePrijs > samsungPrijs and asusPrijs:
     print(f"De {telefoon1} is het duurst, de telefoon kost: {iphonePrijs} Euro")
-elif samsungPrijs > iphonePrijs:
+elif samsungPrijs > iphonePrijs and asusPrijs:
     print(f"De {telefoon2} is het duurst, de telefoon kost: {samsungPrijs} Euro")
+elif asusPrijs > iphonePrijs and samsungPrijs:
+    print(f"De {telefoon3} is het duurst, de telefoon kost: {asusPrijs} Euro")
 
-if iphonePrijs > samsungPrijs:
-    print(f"De {telefoon2} is het goedkoopst, de telefoon kost: {samsungPrijs} Euro")
-elif samsungPrijs > iphonePrijs:
-    print(f"De {telefoon1} is het goedkoopst, de telefoon kost: {iphonePrijs} Euro")
+if iphonePrijs < samsungPrijs and asusPrijs:
+    print(f"De {telefoon1} is het goedkoopst, de telefoon kost: {samsungPrijs} Euro")
+elif samsungPrijs < iphonePrijs and asusPrijs:
+    print(f"De {telefoon2} is het goedkoopst, de telefoon kost: {iphonePrijs} Euro")
+elif asusPrijs < iphonePrijs and samsungPrijs:
+    print(f"De {telefoon3} is het goedkoopst, de telefoon kost: {asusPrijs} Euro")
+
+if iphonePrijs > 
+
 
 if iphonePrijs == samsungPrijs:
     print(f"De {telefoon1} en de {telefoon2} zijn even duur de telefoons kosten: {iphonePrijs or samsungPrijs} Euro")
