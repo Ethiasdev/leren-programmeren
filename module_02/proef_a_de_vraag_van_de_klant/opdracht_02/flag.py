@@ -43,7 +43,7 @@ vraag5 = input ("Vraag 5: Wie is de keizer van dit land?:").lower() # antwoord :
 fp.display('Italy')
 vraag6 = input ("Vraag 6: Wat is de bekendste gerecht van dit land?:").lower() # antwoord : Pizza
 
-fp.display('Irak')
+fp.display('Iraq')
 vraag7 = input ("Vraag 7: Van welke land is deze vlag?:").lower() # antwoord : Iraq
 
 fp.display('China')
