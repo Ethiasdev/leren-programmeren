@@ -14,6 +14,13 @@ if iphonePrijs > samsungPrijs:
 elif samsungPrijs > iphonePrijs:
     print(f"De {telefoon1} is het goedkoopst, de telefoon kost: {iphonePrijs} Euro")
 
+if iphonePrijs == samsungPrijs:
+    print(f"De {telefoon1} en de {telefoon2} zijn even duur de telefoons kosten: {iphonePrijs or samsungPrijs} Euro")
+
+if iphonePrijs > 899 and samsungPrijs > 899:
+    print("Het advies is dus geen telefoon te kopen, ze zijn te duur.")
+    exit()
+
 if samsungPrijs > iphonePrijs:
     print(f"Het advies is dus de {telefoon1} te kopen. Deze is namelijk {samsungPrijs - iphonePrijs} euro goedkoper dan de {telefoon2}.")
 
@@ -23,7 +30,7 @@ elif iphonePrijs > samsungPrijs:
     print(f"Het advies is dus de {telefoon2} te kopen. Deze is namelijk {iphonePrijs - samsungPrijs} euro goedkoper dan de {telefoon1}.")
 
 if iphonePrijs == samsungPrijs:
-    print(f"Het advies is dus de {telefoon1} te kopen. Deze is namelijk even duur als de {telefoon2} ze kost allebei {iphonePrijs or samsungPrijs} euro.")
+    print(f"Het advies is dus de {telefoon1} te kopen. Deze is namelijk even duur als de {telefoon2} ze kosten allebei {iphonePrijs or samsungPrijs} euro.")
 
 
 
