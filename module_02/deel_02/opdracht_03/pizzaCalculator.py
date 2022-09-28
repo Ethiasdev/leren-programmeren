@@ -8,17 +8,17 @@ largeAmount = 12 #enkel prijs large
 
 btw = 9 #btw prijs
 var = 0
-while var == 1:
+while var == 0:
     try:
         small = int(input("Hoeveel small pizza's wilt u?:"))
         var += 1
     except: (print("Vul gehele getallen in!"))
-while var == 2 :    
+while var == 1 :    
     try:
         medium = int(input("Hoeveel medium pizza's wilt u?:"))
         var += 1
     except: (print("Vul gehele getallen in!"))
-while var == 3:
+while var == 2:
     try:
         large = int(input("Hoeveel large pizza's wilt u?:"))
         var += 1
