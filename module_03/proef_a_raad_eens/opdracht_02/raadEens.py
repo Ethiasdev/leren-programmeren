@@ -8,10 +8,10 @@ cijferControle = 0
 
 
 while rondes < 20:
-    num = random.randint(1, 1)
+    num = random.randint(1, 1000)
     raden = input("Wil je een getal raden?: ").lower()
     if raden == "ja":
-        print(num)
+        print(num) # dit is om te het testen van de programma makkelijker te maken
         while pogingen < 10:  # loop van het getal raden stopt na 10 pogingen
             while cijferControle == 0:
                 try: # verplicten van cijfers
