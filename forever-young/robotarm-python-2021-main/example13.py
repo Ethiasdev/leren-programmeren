@@ -4,13 +4,13 @@ robotArm = RobotArm()
 robotArm.randomLevel(1,7)
 
 # Jouw python instructies zet je vanaf hier:
-for f in range(6):
+for f in range(8):
     
     
     robotArm.grab()
     for k in range(1 + f): robotArm.moveRight()
     robotArm.drop()
-    for z in range(9): robotArm.moveLeft()
+    for z in range(1 + f): robotArm.moveLeft()
     if robotArm.grab() == False:
         break
 

@@ -1,9 +1,9 @@
 k = 50
 b = 50
-antwoord = 0
+antwoord = 50  
 
 while antwoord < 1000:
-    b = f"{b} + {k}"
     k = k + 1
+    b = f"{b} + {k}"
     antwoord = antwoord + k
-    print(f"{b} {k} = {antwoord}")
+    print(f"{b} = {antwoord}") 
