@@ -41,6 +41,7 @@ while rondes < 20:
         exit()
     print(f"Je hebt {score} punt(en)!")
     rondes += 1
+    pogingen = 0
 
         
 
