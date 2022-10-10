@@ -47,7 +47,7 @@ fp.display('Iraq')
 vraag7 = input ("Vraag 7: Van welke land is deze vlag?:").lower() # antwoord : Iraq
 
 fp.display('China')
-vraag8 = input ("Vraag 7: Hoe noem je mensen in dit land?:").lower() # antwoord : Chinezen
+vraag8 = input ("Vraag 8: Hoe noem je mensen in dit land?:").lower() # antwoord : Chinezen
 
 fp.display('France')
 vraag9 = input ("Vraag 9: Waar staat dit land bekend voor?:").lower() # antwoord : Eiffeltoren
