@@ -13,8 +13,9 @@ for k in range(hoeveel):
         bag.update({kleur: getal})
 
     elif kleur in bag:
-        getal +=1
-        bag.update({kleur: getal})
+       
+        bag[kleur] += 1
+        
         
         
 print(bag) 
