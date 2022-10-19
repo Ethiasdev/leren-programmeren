@@ -11,7 +11,7 @@ while True:
     if product not in bag:
         bag.update({product: aantal})
         
-    elif product in bag:
+    else:
         bag[product] += aantal
 
 print("-[ BOODSCHAPPENLIJST ]-")

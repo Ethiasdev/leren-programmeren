@@ -1,26 +1,31 @@
-dagen = ("", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag")
+dagen = ("maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag")
 
 
 print("Alle dagen van de week zijn: ")
-for k in range (len(dagen)):
-    print(dagen[k])
+for k in dagen:
+    print(k)
 
-
-print("De werkdagen zijn: ")
-print(dagen[1:6])
+print("Alle werkdagen van de week zijn: ")
+for x in dagen[0:5]:
+    print(x)
 
 print("De weekenddagen zijn: ")
-print(dagen[6:8])
+for j in dagen[5:7]:
+    print(j)
 
 
 print("Alle dagen van de week in omgekeerde volgorde zijn: ")
-print(dagen[7:0:-1])
+for z in dagen[7:0:-1]:
+    print(z)
 
 print("De werkdagen in omgekeerde volgorde zijn: ")
-print(dagen[5:0:-1])
+for h in dagen[4:0:-1]:
+    print(h)
 
 print("De weekenddagen in omgekeerde volgorde zijn: ")
-print(dagen[7:5:-1])
+for p in dagen[7:4:-1]:
+    print(p)
+
     
 
 
