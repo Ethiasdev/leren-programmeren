@@ -15,16 +15,16 @@ for j in dagen[5:7]:
 
 
 print("Alle dagen van de week in omgekeerde volgorde zijn: ")
-for z in dagen[7:0:-1]:
+for z in reversed(dagen):
     print(z)
 
 print("De werkdagen in omgekeerde volgorde zijn: ")
-for h in dagen[4:0:-1]:
-    print(h)
+for z in reversed(dagen[0:5]):
+    print(z)
 
 print("De weekenddagen in omgekeerde volgorde zijn: ")
-for p in dagen[7:4:-1]:
-    print(p)
+for z in reversed(dagen[5:7]):
+    print(z)
 
     
 

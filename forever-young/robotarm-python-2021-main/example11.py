@@ -5,7 +5,7 @@ robotArm = RobotArm('exercise 11')
 for l in range(8): robotArm.moveRight()
 for f in range(9):
 
-    robotArm.moveLeft
+    
     robotArm.grab()
     color = robotArm.scan()
 
