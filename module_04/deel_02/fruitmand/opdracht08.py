@@ -1,12 +1,12 @@
 from fruitmand import fruitmand
 
-extra = {
+fruitmand.append({
     'name' : 'watermeloen',
-    'weight' : 2130,
+    'weight' : 2310,
     'color' : 'green',
     'round' : True
-}
+})
 
-fruitmandNew = fruitmand | extra
-
-print(fruitmandNew)
+gewicht = [i['weight'] for i in fruitmand if 'weight' in i]
+totaal = sum(gewicht)
+print(totaal)

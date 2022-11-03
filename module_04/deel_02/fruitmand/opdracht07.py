@@ -1,4 +1,3 @@
-from unittest import skip
 from fruitmand import fruitmand
 
 for k in fruitmand:
