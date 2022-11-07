@@ -8,7 +8,7 @@ for i in range(0,len(naam)):
     naamGewicht[naam[i]] = gewicht[i]
 
 print(naamGewicht)
-
+print(naamGewicht.items())
 sort_orders = sorted(naamGewicht.items(), key=lambda x: x[1])
 for i in reversed(sort_orders):
 

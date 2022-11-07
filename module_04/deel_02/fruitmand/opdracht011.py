@@ -1,4 +1,4 @@
-from fruitmand import fruitmand
+from fruitmand1 import fruitmand
 rond = 0
 nietRond = 0
 

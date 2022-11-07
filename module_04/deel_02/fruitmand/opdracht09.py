@@ -3,5 +3,14 @@ newFruitmand = [
 
     item for item in fruitmand if item.get('name') != "druif"
 ]
-kleur = [i['color'] for i in fruitmand if 'color' in i]
-for i in kleur: print(i)
+kleur = [i['color'] for i in newFruitmand if 'color' in i]
+lijst = []
+
+for i in kleur:
+    if i in lijst:
+        continue
+    print(i)
+    lijst.append(i)
+    
+    
+    

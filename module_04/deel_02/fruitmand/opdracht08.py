@@ -1,4 +1,4 @@
-from fruitmand import fruitmand
+from fruitmand1 import fruitmand
 
 fruitmand.append({
     'name' : 'watermeloen',
@@ -7,6 +7,6 @@ fruitmand.append({
     'round' : True
 })
 
-gewicht = [i['weight'] for i in fruitmand if 'weight' in i]
+gewicht = [fruit['weight'] for fruit in fruitmand if 'weight' in fruit]
 totaal = sum(gewicht)
 print(totaal)

@@ -1,4 +1,4 @@
-from fruitmand import fruitmand
+from fruitmand1 import fruitmand
 import random
 
 aantal = int(input("Hoeveel fruit wilt u?: "))
