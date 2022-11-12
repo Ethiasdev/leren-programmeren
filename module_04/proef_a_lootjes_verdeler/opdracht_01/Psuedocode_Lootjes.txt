@@ -1,0 +1,17 @@
+Wil je lootjes trekken?
+	nee?: Programma stopt...
+	ja?: Wat zijn de naam van de spelers? Type "done" als alle namen zijn ingevuld..
+
+Is er done ingevuld?: nee? vraag het dan een andere naam.
+is er done ingevuld?: ja? Check of er meer dan 3 namen ingevuld is. klopt dat? checkt hij of alle namen uniek zijn.
+	Anders stopt de programma.
+
+Zijn er wel meer dan 3 namen ingevuld en zijn alle namen ook uniek dan maakt hij list1 met alle namen en een list2 met dezelfde namen.
+
+List1 en List2 worden gepaired.
+List2 word geshuffled totdat geen een naam de zelfde naam heeft.
+
+Heeft iedereen een andere naam?
+Dan print hij alle namen + de bijbehorende naam.
+
+	
