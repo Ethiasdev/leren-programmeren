@@ -1,5 +1,4 @@
 import random
-import collections
 lijst1 = []
 lijst2 = []
 
@@ -19,16 +18,17 @@ if len(lijst1) < 3:
 elif len(lijst1) > len(set(lijst1)):
     print("Er zijn niet meer dan 3 namen opgenoemd of niet alle namen zijn uniek..")
 else:
-    for k in lijst1:
-        if len(set(lijst1)) != len(set(lijst2)):
-            picker = random.choice(lijst1)
-            lijst2.append(picker)
-        else:
-            lijst2.remove(picker)
+    while True:
+        random.shuffle(lijst1)
+        for i in range(len(lijst1)):
+            if lijst1[i] != lijst1[i - 1]:
+                lijst2.append(lijst1[i - 1])
 
-for a,b in zip(lijst1, lijst2):
-    print(a,b)
-        
+        if len(lijst2) == len(lijst1):
+            break
+
+    for i in range(len(lijst2)):
+        print(lijst1[i], "heeft", lijst2[i], "getrokken")
 
 
 
