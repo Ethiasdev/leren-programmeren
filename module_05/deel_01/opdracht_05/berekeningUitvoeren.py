@@ -18,14 +18,19 @@ while not keuze in ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'):
 #########################################
 aantal = -1
 while True:
-    if aantal > -1 and keuze != 'i':
+    if aantal > -1 and keuze != 'i' and keuze in ('a', 'b', 'c', 'd'):
+        number1 = aantal
         number2 = int(input("Geef de 2e getal op: "))
+
+    elif aantal > -1 and keuze != 'i' and keuze in ('e', 'f', 'g', 'h'):
+        number1 = aantal
+
         
-    elif not keuze in ('e', 'f', 'g', 'h', 'i'):
+    elif keuze in ('a', 'b', 'c', 'd'):
         number1 = int(input("Geef een getal op: "))
         number2 = int(input("Geef nog een getal op: "))
 
-    elif not keuze in ('a', 'b', 'c', 'd', 'i'):
+    elif keuze in ('e', 'f', 'g', 'h'):
         number1 = int(input("Geef een getal op: "))
 
     else:
@@ -62,7 +67,7 @@ while True:
         print(aantal)
 
     keuze = input(f"Wil je wat met het antwoord ({aantal}) doen? A) iets optellen, B) iets aftrekken, C) met iets vermenigvuldigen, D) ergens door delen, E) ophogen, F) verlagen, G) verdubbelen, H) halveren of I) Nee?")
-    number1 = aantal
+    
 
 
 
