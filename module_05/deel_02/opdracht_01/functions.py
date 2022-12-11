@@ -3,6 +3,7 @@ from termcolor import colored
 from data import JOURNEY_IN_DAYS
 from data import COST_FOOD_HUMAN_COPPER_PER_DAY
 from data import COST_FOOD_HORSE_COPPER_PER_DAY
+from data import friends
 
 ##################### M04.D02.O2 #####################
 
@@ -21,7 +22,7 @@ def copper2gold(amount:int) -> float:
     return float(goud)
 
 def platinum2gold(amount:int) -> float:
-    platinum = amount / 25
+    platinum = amount * 25
     return platinum
 
 def getPersonCashInGold(personCash:dict) -> float:
@@ -44,16 +45,20 @@ def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
 ##################### M04.D02.O5 #####################
 
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
-    pass
+    for i in list:
+        if (i[key]) == value:
+            naam = [i['name'] for i in list if 'name' in i]
+            return naam
 
 def getAdventuringPeople(people:list) -> list:
-    pass
+    return getFromListByKeyIs(people, 'adventuring', True)
 
 def getShareWithFriends(friends:list) -> int:
-    pass
+    return getFromListByKeyIs(friends, 'shareWith', True)
 
 def getAdventuringFriends(friends:list) -> list:
-    pass
+    getFromListByKeyIs(friends, 'adventuring', True)
+    getFromListByKeyIs(friends, 'shareWith', True)
 
 ##################### M04.D02.O6 #####################
 
