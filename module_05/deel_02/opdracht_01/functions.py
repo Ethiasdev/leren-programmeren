@@ -1,9 +1,9 @@
 import time
+import math
 from termcolor import colored
 from data import JOURNEY_IN_DAYS
 from data import COST_FOOD_HUMAN_COPPER_PER_DAY
 from data import COST_FOOD_HORSE_COPPER_PER_DAY
-from data import friends
 from data import COST_TENT_GOLD_PER_WEEK
 from data import COST_HORSE_SILVER_PER_DAY
 
@@ -68,21 +68,39 @@ def getAdventuringFriends(friends:list) -> list:
 ##################### M04.D02.O6 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:
-    pass
+    return math.ceil(people / 2)
 
 def getNumberOfTentsNeeded(people:int) -> int:
-    pass
+    return math.ceil(people / 3)
 
 def getTotalRentalCost(horses:int, tents:int) -> float:
-    pass
+    return horses * silver2gold(COST_HORSE_SILVER_PER_DAY) * JOURNEY_IN_DAYS + tents * COST_TENT_GOLD_PER_WEEK * math.ceil(JOURNEY_IN_DAYS / 7)
 
 ##################### M04.D02.O7 #####################
 
 def getItemsAsText(items:list) -> str:
-    pass
+  item_text = []
+  for item in items:
+    item_text.append("{amount}{unit} {name}".format(amount=item["amount"], name=item["name"], unit=item["unit"]))
+
+  return ", ".join(item_text)
 
 def getItemsValueInGold(items:list) -> float:
-    pass
+    lijst = []
+    for item in items:
+        if item['price']['type'] == 'copper':
+            copper = item['amount'] * item['price']['amount']
+            lijst.append(copper2gold(copper))
+        elif item['price']['type'] == 'silver':
+            silver = item['amount'] * item['price']['amount']
+            lijst.append(silver2gold(silver))
+        elif item['price']['type'] == 'platinum':
+            platinum = item['amount'] * item['price']['amount']
+            lijst.append(platinum2gold(platinum))
+        else:
+            goud = item['amount'] * item['price']['amount']
+            lijst.append(goud)
+    return sum(lijst)
 
 ##################### M04.D02.O8 #####################
 
