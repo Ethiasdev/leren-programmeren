@@ -173,31 +173,21 @@ def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:lis
     people = [mainCharacter] + friends + investors
     earnings = []
 
-    adventuringFriends = getAdventuringFriends(friends)
-    interestingInvestors = getInterestingInvestors(investors)
-    adventuringInvestors = getAdventuringInvestors(investors)
-    investorsCuts = getInvestorsCuts(profitGold, investors)
-    goldCut = getAdventurerCut(profitGold, investorsCuts, len(people))
+    # haal de juiste inhoud op
+    adventuringFriends = []
+    interestingInvestors = []
+    adventuringInvestors = []
+    investorsCuts = []
+    goldCut = 0.0
 
+    # verdeel de uitkomsten
     for person in people:
-        SPECIAL_AMOUNT = 10
-        start = person.get('cash', {}).get('gold', 0)
-        name = person.get('name', '')
-        if person in adventuringFriends:
-            end = start + goldCut + (10 * len(adventuringFriends))
-        elif person in interestingInvestors or person in adventuringInvestors:
-            for investor in investorsCuts:
-                if type(investor) == dict and 'name' in investor and investor['name'] == name:
-                    if person in adventuringInvestors:
-                        end = start + investor['cut'] + SPECIAL_AMOUNT
-                    else:
-                        end = start + investor['cut']
-        else:
-            end = start
+        #code aanvullen
+
         earnings.append({
-            'name'   : name,
-            'start'  : start,
-            'end'    : end
+            'name'   : '??',
+            'start'  : 0.0,
+            'end'    : 0.0
         })
 
     return earnings
