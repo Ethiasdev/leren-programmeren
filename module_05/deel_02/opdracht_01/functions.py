@@ -50,9 +50,10 @@ def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
     naam = []
     for i in list:
-        if i[key] == value:
+        if key in i and i[key] == value:
             naam.append(i)
     return naam
+
 
 def getAdventuringPeople(people:list) -> list:
     return getFromListByKeyIs(people, 'adventuring', True)
@@ -172,24 +173,56 @@ def getAdventurerCut(profitGold:float, investorsCuts:list, fellowship:list) -> f
 def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:list) -> list:
     people = [mainCharacter] + friends + investors
     earnings = []
+    donation = 10
+
+
+    
 
     # haal de juiste inhoud op
-    adventuringFriends = []
-    interestingInvestors = []
-    adventuringInvestors = []
-    investorsCuts = []
-    goldCut = 0.0
+    adventuringFriends = getAdventuringFriends(friends)
+    interestingInvestors = getInterestingInvestors(investors)
+    adventuringInvestors = getAdventuringInvestors(investors)
+    investorsCuts = getInvestorsCuts(profitGold, investors)
+    goldCut = getAdventurerCut(profitGold, investorsCuts, len(people))
 
     # verdeel de uitkomsten
     for person in people:
-        #code aanvullen
+        if 'cash' in person:
+            cash_dict = person['cash']
+        start = getPersonCashInGold(cash_dict)
+        
+        
+        if person == mainCharacter:
+
+            end = round((start+goldCut)+(donation*len(adventuringFriends)),2)
+
+        elif person in adventuringFriends:
+
+            end = round((start+goldCut)-donation,2)
+        else:
+            end = start
+        
+        
+
+        if "profitReturn" in person:
+            if person in interestingInvestors:
+                if person in adventuringInvestors:
+
+                    end = round((profitGold/100)*person["profitReturn"]+start+goldCut,2)
+
+                else:
+
+                    end = round((profitGold/100)*person["profitReturn"]+start,2)
+        
+        
 
         earnings.append({
-            'name'   : '??',
-            'start'  : 0.0,
-            'end'    : 0.0
+            'name'   : person['name'],
+            'start'  : start,
+            'end'    : end
         })
-
+        
+                                                                                                                                                                                                
     return earnings
 
 
