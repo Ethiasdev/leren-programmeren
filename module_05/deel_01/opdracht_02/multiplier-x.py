@@ -1,9 +1,11 @@
-def my_function(getal):
-    for k in range(10):
-        som = (k + 1) * getal
-        print (f"{getal} x {k + 1} = {som}")
+def get_multiplication_table(num):
+    table = []
+    for i in range(1, 11):
+        result = num * i
+        table.append(f"{num} x {i} = {result}")
+    return table
 
-getal = int(input("van welke getal wil je som weten?: "))
-        
+number = int(input("welke tafel wil je getal weten?? "))
 
-my_function(getal)
+for row in get_multiplication_table(number):
+    print(row)

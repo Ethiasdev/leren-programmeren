@@ -1,5 +1,8 @@
 def my_function(getal):
+    list = []
     for k in range(getal):
-        print(f"Hello from function town {k + 1}! ")
+        list.append(f"Hello from function town {k + 1}! ")
+    return list
 
-my_function(7)
+for i in my_function(7):
+    print(i)

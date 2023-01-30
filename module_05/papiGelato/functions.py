@@ -12,8 +12,14 @@ PRIJS_TOPPINGS = {
     "hagelslag": 0.50, "nootjes": 1.00
     }
 
-BESTELLEN = False
+BESTELLEN = True
 BESTELLINGEN = []
+
+SOORT_KLANT = ['particulier', 'zakelijk']
+KLANT_ZAKELIJK = False
+PRIJS_PER_LITER = {
+    "vanille" : 9.80
+}
 
 # vraag en geef aantal bolletjes van het ijsje
 def vraag_aantal_bolletje() -> int:
@@ -43,9 +49,6 @@ def vraag_smaak_bolletje(aantalBolletjes) -> str:
             i -= 1
     return smaken
 
-top = ''
-for i in TOPPINGS:
-    top += TOPPINGS[i]
     
 def vraag_toppings() -> list:
     print(f"Beschikbare toppings: {TOPPINGS[0]}, {TOPPINGS[1]}.")
@@ -83,14 +86,42 @@ def bereken_prijs(ijsje: dict) -> float:
 def toon_bonnetje(ijsjes: list):
     totaal_prijs = 0.0
     print("Bonnetje:")
-    for ijsje in ijsjes:
-        smaken = ', '.join(ijsje['smaken'])
-        toppings = ', '.join(ijsje['toppings'])
-        prijs = ijsje['grootte'] * PRIJS_BOLLETJES['vanille'] + sum(PRIJS_TOPPINGS[topping] for topping in ijsje['toppings'])
-        prijs += PRIJS_HOORNTJES[ijsje['verpakking']]
-        totaal_prijs += prijs
-        print(f"{ijsje['grootte']} bolletjes {smaken} in {ijsje['verpakking']} met toppings {toppings} : €{prijs}")
-    print(f"Totaal : €{round(totaal_prijs,2)}")
+    if BESTELLEN == False:
+        for ijsje in ijsjes:
+            smaken = ', '.join(ijsje['smaken'])
+            toppings = ', '.join(ijsje['toppings'])
+            prijs = ijsje['grootte'] * PRIJS_BOLLETJES['vanille'] + sum(PRIJS_TOPPINGS[topping] for topping in ijsje['toppings'])
+            prijs += PRIJS_HOORNTJES[ijsje['verpakking']]
+            totaal_prijs += prijs
+            print(f"{smaken}   {ijsje['grootte']} x €{PRIJS_BOLLETJES['vanille']} = €{ijsje['grootte'] * PRIJS_BOLLETJES['vanille']}\n{ijsje['verpakking']}    1 x €{ijsje['verpakking']} = €{PRIJS_HOORNTJES[ijsje['verpakking']]}\nTopping   1 x {toppings} = €{PRIJS_TOPPINGS[toppings]}\n---------------------------")                                             
+        print(f"Totaal : €{round(totaal_prijs,2)}")
+    else:
+        for ijsje in ijsjes:
+            smaken = ', '.join(ijsje['smaken'])
+            totaal_prijs += ijsje['prijs']
+            print(f"L.{smaken}    {ijsje['grootte']} x €{PRIJS_PER_LITER['vanille']} = €{ijsje['grootte'] * PRIJS_PER_LITER['vanille']}")
+        print(f"Totaal : €{round(totaal_prijs,2)}")
+        print(f"BTW: €{round(totaal_prijs / 100 * 9, 2)}")
+
+        
+def vraag_zakelijk():
+    return input("bent u een zakelijk of een particulier klant?: ")
+
+
+def check_zakelijk(klant):
+    if klant == 'particulier':
+        BESTELLEN = False
+        return BESTELLEN
+    else:
+        BESTELLEN = True
+        return BESTELLEN
+
+def bereken_prijs_liters(ijsje):
+    prijs = 0.0
+    prijs += ijsje["grootte"] * PRIJS_PER_LITER['vanille']
+    return prijs
+
+
 
 
 

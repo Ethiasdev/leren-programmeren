@@ -1,8 +1,14 @@
 from functions import *
+ijsje = {}
 print(WELKOM)
 
+BESTELLEN = check_zakelijk(vraag_zakelijk())
+ijsje['grootte'] = vraag_aantal_bolletje()
+ijsje['smaken'] = vraag_smaak_bolletje(ijsje['grootte'])
+ijsje['prijs'] = bereken_prijs_liters(ijsje)
+bestellingen = bestellingen_toevoegen(ijsje)
+
 while BESTELLEN == False:
-    ijsje = {}
     ijsje['grootte'] = vraag_aantal_bolletje()
     ijsje['smaken'] = vraag_smaak_bolletje(ijsje['grootte'])
     ijsje['verpakking'] = get_hoorntje_of_bakje(ijsje['grootte'])
