@@ -1,19 +1,18 @@
 from functions import *
 print(WELKOM)
-ijsje = {}
 
-
-
-ijsje['grootte']= vraag_aantal_bolletje()
-ijsje['verpakking']= get_hoorntje_of_bakje(ijsje['grootte'])
-ijsje['smaken'] = []
-for i in range(ijsje['grootte']):
-    smaak = vraag_smaak_bolletje(i+1)
-    ijsje['smaken'].append(smaak)
+while BESTELLEN == False:
+    ijsje = {}
+    ijsje['grootte'] = vraag_aantal_bolletje()
+    ijsje['smaken'] = vraag_smaak_bolletje(ijsje['grootte'])
+    ijsje['verpakking'] = get_hoorntje_of_bakje(ijsje['grootte'])
+    ijsje['toppings'] = vraag_toppings()
     ijsje['prijs'] = bereken_prijs(ijsje)
+    bestellingen = bestellingen_toevoegen(ijsje)
+    nog_een_bestelling = vraag_nog_een_bestellen()
+    BESTELLEN = check_nog_bestellen(nog_een_bestelling)
 
-ijsje['toppings'] = vraag_toppings()
-ijsje['prijs'] = bereken_prijs(ijsje)
+toon_bonnetje(bestellingen)
 
-print("Hier is uw " + get_ijsje_string(ijsje))
-toon_bonnetje(ijsje)
+
+
