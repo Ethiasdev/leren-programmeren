@@ -1,9 +1,9 @@
 WELKOM = "Welkom bij Papi Gelato!"
 IJSJE_VRAAG = "Hoeveel bolletjes wilt u?"
 PRIJS_BOLLETJES = {
-    "vanille" : 1.10
+    "vanille" : 0.95
 }
-SMAKEN = ['aardbei', 'chocolade', 'munt', "vanille"]
+SMAKEN = ['aardbei', 'chocolade', "vanille"]
 TOPPINGS = ["hagelslag", "nootjes"]
 PRIJS_HOORNTJES = {
     "hoorntje" : 1.25, "bakje" : 0.75
@@ -41,7 +41,7 @@ def get_hoorntje_of_bakje(grootte: int) -> str:
 def vraag_smaak_bolletje(aantalBolletjes) -> str:
     smaken = []
     for i in range(aantalBolletjes):
-        smaak = input(f"Welke smaak wilt u voor bolletje nummer {i+1}? Aardbei, Chocolade, Munt of Vanille? ").lower()
+        smaak = input(f"Welke smaak wilt u voor bolletje nummer {i+1}? Aardbei, Chocolade of Vanille? ").lower()
         if smaak in SMAKEN:
             smaken.append(smaak.upper())
         else:
@@ -101,9 +101,9 @@ def toon_bonnetje(ijsjes: list):
             totaal_prijs += ijsje['prijs']
             print(f"L.{smaken}    {ijsje['grootte']} x €{PRIJS_PER_LITER['vanille']} = €{ijsje['grootte'] * PRIJS_PER_LITER['vanille']}")
         print(f"Totaal : €{round(totaal_prijs,2)}")
-        print(f"BTW: €{round(totaal_prijs / 100 * 9, 2)}")
+        print(f"BTW: €{round(totaal_prijs / 100 * 6, 2)}")
 
-        
+
 def vraag_zakelijk():
     return input("bent u een zakelijk of een particulier klant?: ")
 
